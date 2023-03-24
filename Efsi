@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Promedio:<p id="p1"></p>
+    Nota mas alta:<p id="p2"></p>
+    <form name="Notas" method="post" onsubmit="return PromedioyMasAlto(Nota_Matematica,Nota_Lengua,Nota_EFSI)">
+        <h2>Respuesta</h2>
+        <p id = matte>Matematica:</p>
+        <input type="number" id="Nota_Matematica" name="Maths" required >
+        <p id = leng>Lengua: </p>
+        <input type="number" id="Nota_Lengua" name="Lang" required >
+        <p id = efsii>EFSI:</p>
+        <input type="number" id="Nota_EFSI" name="EFSI" required > <br><br>
+        <input type="submit" id="submit" value="mandar info" required onclick="PromedioyMasAlto(event)">
+        <input type="submit" id="submit" value="mas alto" required onclick="MasAlto(event)">
+    </form><br><br>
+    <script src ="Script1.js"></script>
+</body>
+</html>
