@@ -1,4 +1,4 @@
-function PromedioyMasAlto(event)
+function Promedio(event)
 {
     event.preventDefault()
     
@@ -16,8 +16,8 @@ function PromedioyMasAlto(event)
     if (promedio >= 6){document.getElementById('p1').style.color = "lime";}
     else{document.getElementById('p1').style.color = "red";}
     
-    if(ValidarResultado(mat,len,efsi) && EsNulo(promedio)){document.getElementById("p1").innerHTML = promedio; document.getElementById("p2").innerHTML = alto;}
-    else{document.getElementById("p2").innerHTML = "Error!"; document.getElementById("p1").innerHTML = "Error!"; document.getElementById("p2").style.color = "red"; document.getElementById("p1").style.color = "red";}
+    if(ValidarResultado(mat,len,efsi) && EsNulo(promedio)){document.getElementById("p1").innerHTML = promedio}
+    else{document.getElementById("p1").innerHTML = "Error!"; document.getElementById("p2").style.color = "red"; document.getElementById("p1").style.color = "red";}
 }
 function MasAlto(event)
 {
@@ -38,6 +38,8 @@ function MasAlto(event)
   if(len==alto && alto <=10 && alto >= 0){document.getElementById('leng').style.color = "blue";}
   if(efsi==alto && alto <=10 && alto >= 0){document.getElementById('efsii').style.color = "blue";}
   document.getElementById("p2").innerHTML = alto;
+  if(ValidarResultado(mat,len,efsi) && EsNulo(alto)){ document.getElementById("p2").innerHTML = alto;}
+    else{document.getElementById("p2").innerHTML = "Error!"; document.getElementById("p2").style.color = "red"; document.getElementById("p1").style.color = "red";}
 }
 function ValidarNumerosIndividuales (ID, double)
 {
